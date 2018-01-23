@@ -1,0 +1,1 @@
+select sum(AllianceSize) as RED from (select Alliance, sum(MilSize) as AllianceSize from nations where LastOnline <= 72 group by Alliance order by sum(MilSize) desc) where Alliance in ("BAMF", "The Federal Colonies", "Brotherhood of Zion", "Dictators United", "The Dino Reich", "New Lunar Republic", "UFN", "ZAHL")

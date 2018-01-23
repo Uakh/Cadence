@@ -1,0 +1,1 @@
+select sum(AllianceSize) as BLU from (select Alliance, sum(MilSize) as AllianceSize from nations where LastOnline <= 72 group by Alliance order by sum(MilSize) desc) where Alliance in ("Comintern", "Blood Crescent", "The Asian Alliance", "INNAWDS", "SPQR", "Brotherhood of Nod", "The Sealion League")
